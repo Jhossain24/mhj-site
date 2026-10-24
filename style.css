@@ -1221,30 +1221,38 @@ img { display: block; max-width: 100%; }
 /* 4. Mobile Menu Styles */
 @media (max-width: 900px) {
   .navbar {
-    flex-direction: row; /* Keep logo and hamburger side-by-side */
+    flex-direction: row; 
     flex-wrap: wrap;
-    padding: 1.25rem 1.5rem;
+    padding: 1rem 1.5rem;
     justify-content: space-between;
     align-items: center;
+    background: var(--white); /* Ensure background stays solid */
   }
 
   .hamburger {
-    display: block; /* Show hamburger on mobile */
+    display: block; 
+    font-size: 1.8rem;
+    color: var(--blue);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 999; /* Keeps it clickable above everything */
   }
 
   .nav-links {
-    display: none; /* Hide links by default */
+    display: none; /* Hide the links by default on mobile */
     width: 100%;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
     padding-bottom: 1rem;
+    border-top: 1px solid var(--border);
+    margin-top: 1rem;
   }
 
-  /* When menu is open, show the links */
+  /* When the menu is clicked, show the links */
   .menu-open .nav-links {
     display: flex; 
-    animation: slideDownFade 0.3s ease-out forwards;
   }
 }
