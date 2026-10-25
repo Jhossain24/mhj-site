@@ -11,7 +11,7 @@
   <!-- ================= NAVBAR ================= -->
     <nav class="navbar">
     <a href="index.html" class="logo">M H J</a>
-    <button class="hamburger" aria-label="Toggle navigation">☰</button>
+    <button class="hamburger" aria-label="Toggle navigation" onclick="document.querySelector('.navbar').classList.toggle('menu-open'); this.innerHTML = this.innerHTML === '☰' ? '✕' : '☰';">☰</button>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>

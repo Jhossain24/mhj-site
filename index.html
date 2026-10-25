@@ -9,9 +9,9 @@
 <body>
 
   <!-- ================= NAVBAR ================= -->
-    <nav class="navbar">
+  <nav class="navbar">
     <a href="index.html" class="logo">M H J</a>
-    <button class="hamburger" aria-label="Toggle navigation">☰</button>
+    <button class="hamburger" aria-label="Toggle navigation" onclick="document.querySelector('.navbar').classList.toggle('menu-open'); this.innerHTML = this.innerHTML === '☰' ? '✕' : '☰';">☰</button>
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="about.html">About</a></li>
@@ -40,7 +40,6 @@
         <img src="images/portrait1.jpg" alt="Mohammed Hossain Jaimy" />
       </div>
 
-      <!-- Single Column List of 12 Titles -->
       <div class="hero-middle">
         <ul class="titles-list">
           <li>Director</li>
@@ -67,20 +66,24 @@
 
   <!-- ================= REEL (VIDEO) ================= -->
   <section class="reel-section">
+    
+    <!-- New Header -->
+    <h2 class="reel-title">My REEL</h2>
+
     <div class="video-container">
       <!-- The video file must be named reel.mp4 and placed in the main mhj-site folder -->
-      <video src="reel.mp4" poster="images/video-thumbnail.jpg" autoplay loop muted playsinline controls></video>
+      <video src="reel.mp4" poster="images/video-thumbnail.jpg" loop muted playsinline controls></video>
     </div>
   </section>
 
-  <!-- ================= NEW BOTTOM SECTION (Images + Placeholder) ================= -->
+  <!-- ================= NEW BOTTOM SECTION (3 Images) ================= -->
   <section class="home-bottom-feature">
     <div class="feature-image">
       <img src="images/home1.jpg" alt="Mohammed Hossain Jaimy" />
     </div>
     
-    <div class="feature-text">
-      <h2>Placeholder</h2>
+    <div class="feature-image">
+      <img src="images/yt.jpg" alt="Mohammed Hossain Jaimy" />
     </div>
 
     <div class="feature-image">
