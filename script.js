@@ -3,26 +3,21 @@ document.addEventListener("DOMContentLoaded", () => {
      1. MOBILE HAMBURGER MENU
      ========================================== */
   const navbar = document.querySelector(".navbar");
-  
-  // Create the hamburger button
-  const hamburgerBtn = document.createElement("button");
-  hamburgerBtn.className = "hamburger";
-  hamburgerBtn.innerHTML = "☰";
-  hamburgerBtn.setAttribute("aria-label", "Toggle navigation");
-  
-  // Insert the button into the navbar
-  navbar.insertBefore(hamburgerBtn, navbar.querySelector(".nav-links"));
+  const hamburgerBtn = document.querySelector(".hamburger");
 
-  // Toggle the menu on click
-  hamburgerBtn.addEventListener("click", () => {
-    navbar.classList.toggle("menu-open");
-    // Change icon between hamburger (☰) and close (✕)
-    if (navbar.classList.contains("menu-open")) {
-      hamburgerBtn.innerHTML = "✕";
-    } else {
-      hamburgerBtn.innerHTML = "☰";
-    }
-  });
+  // Only run if the button exists in the HTML
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener("click", () => {
+      navbar.classList.toggle("menu-open");
+      
+      // Change icon between hamburger (☰) and close (✕)
+      if (navbar.classList.contains("menu-open")) {
+        hamburgerBtn.innerHTML = "✕";
+      } else {
+        hamburgerBtn.innerHTML = "☰";
+      }
+    });
+  }
 
   /* ==========================================
      2. SCROLL REVEAL ANIMATIONS
