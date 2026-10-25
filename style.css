@@ -135,14 +135,29 @@ img { display: block; max-width: 100%; }
 }
 .feature-image img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 6px; box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
 
-/* ============ GLOBAL PAGE HEADER ============ */
+/* ============ GLOBAL PAGE HEADER (COLORFUL MIX) ============ */
 .page-header {
-  text-align: center; padding: 3rem 2rem; background-color: #f8fafc;
-  background-image: radial-gradient(at 50% 0%, rgba(30, 58, 138, 0.08) 0px, transparent 60%);
+  text-align: center; 
+  padding: 4rem 2rem; 
+  /* The colorful gradient mix */
+  background: linear-gradient(135deg, rgba(30, 58, 138, 0.1) 0%, rgba(22, 101, 52, 0.1) 50%, rgba(153, 27, 27, 0.1) 100%);
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
-.page-header h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 800; color: var(--blue); text-transform: uppercase; margin-bottom: 0.5rem; }
-.page-header p { font-size: clamp(0.9rem, 1.2vw, 1.05rem); letter-spacing: 0.1em; text-transform: uppercase; color: var(--black); font-weight: 600; }
+.page-header h1 { 
+  font-family: Georgia, 'Times New Roman', serif; 
+  font-size: clamp(2rem, 4vw, 3.5rem); 
+  font-weight: 800; 
+  color: var(--blue); 
+  text-transform: uppercase; 
+  margin-bottom: 0.5rem; 
+}
+.page-header p { 
+  font-size: clamp(0.9rem, 1.2vw, 1.05rem); 
+  letter-spacing: 0.1em; 
+  text-transform: uppercase; 
+  color: var(--black); 
+  font-weight: 600; 
+}
 
 /* ============ PAGE LOAD ANIMATION ============ */
 @keyframes slideDownFade { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
@@ -301,8 +316,6 @@ img { display: block; max-width: 100%; }
 @media (max-width: 900px) {
   .navbar { flex-direction: row; flex-wrap: wrap; padding: 1rem 1.5rem; justify-content: space-between; align-items: center; background: var(--white); }
   .hamburger { display: block; }
-  
-  /* The crucial fix: Using .navbar.menu-open to ensure it overrides */
   .nav-links { display: none; width: 100%; flex-direction: column; align-items: center; gap: 1.5rem; padding-top: 1.5rem; padding-bottom: 1rem; border-top: 1px solid var(--border); margin-top: 1rem; }
   .navbar.menu-open .nav-links { display: flex !important; }
   
